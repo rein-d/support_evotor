@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивное электронно-техническое руководство для Эвотор 6</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Инструкция по работе с Эвотор 6</h1>
+        <nav>
+            <button id="homeButton">Главная</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="mainMenu">
+            <h2>Выберите проблему:</h2>
+            <button onclick="startDiagnosis('powerIssue')">Касса не включается</button>
+            <button onclick="startDiagnosis('networkError')">Горит красное сообщение с ошибкой подключения к сети</button>
+        </section>
+
+        <section id="diagnosisSection" style="display: none;">
+            <h2 id="diagnosisTitle"></h2>
+            <div id="diagnosisContent"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Эвотор. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
