@@ -24,7 +24,6 @@ nav button {
 }
 
 main {
-    flex: 1;
     padding: 1rem;
     min-height: calc(100vh - 150px);
 }
