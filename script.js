@@ -105,7 +105,7 @@ function handleNetworkError(answer) {
 
 // Возврат в главное меню
 function resetToMainMenu() {
-    const mainMenu = document.getElementById('mainMenu');
+    const mainMenu = document.getElementById('diagnostics');
     const diagnosisSection = document.getElementById('diagnosisSection');
 
     mainMenu.style.display = 'block';
