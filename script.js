@@ -1,10 +1,12 @@
 // Функция для начала диагностики
 function startDiagnosis(issueType) {
+    const mainMenu = document.getElementById('diagnostics');
     const diagnosisSection = document.getElementById('diagnosisSection');
     const diagnosisTitle = document.getElementById('diagnosisTitle');
     const diagnosisContent = document.getElementById('diagnosisContent');
 
     // Скрываем главное меню и показываем раздел диагностики
+    mainMenu.style.display = 'none';
     diagnosisSection.style.display = 'block';
 
     // Очищаем содержимое диагностики
