@@ -52,3 +52,27 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Стили для навигационной панели */
+#navbar {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение кнопок */
+    align-items: center; /* Выравнивание по центру */
+    gap: 0.5rem; /* Расстояние между кнопками */
+    margin-top: 1rem;
+}
+
+#navbar button {
+    background-color: darkslategray;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    width: 80%; /* Ширина кнопок */
+    text-align: center; /* Текст по центру */
+}
+
+#navbar button:hover {
+    background-color: #0056b3;
+}

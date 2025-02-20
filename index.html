@@ -7,30 +7,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Инструкция по работе с Эвотор 6</h1>
-        <nav>
-            <button id="homeButton">Главная</button>
-        </nav>
-    </header>
+<header>
+    <h1>Инструкция по работе с Эвотор 6</h1>
+    <nav id="navbar">
+        <button onclick="showSection('diagnostics')">Диагностика неисправностей</button>
+        <button onclick="showSection('maintenance')">Регламентные работы</button>
+        <button onclick="showSection('reference')">Справочная информация</button>
+    </nav>
+</header>
 
-    <main>
-        <section id="mainMenu">
-            <h2>Выберите проблему:</h2>
-            <button onclick="startDiagnosis('powerIssue')">Касса не включается</button>
-            <button onclick="startDiagnosis('networkError')">Горит красное сообщение с ошибкой подключения к сети</button>
-        </section>
+<main>
+    <!-- Раздел "Диагностика неисправностей" -->
+    <section id="diagnostics" class="content-section">
+        <h2>Диагностика неисправностей</h2>
+        <p>Выберите проблему:</p>
+        <button onclick="startDiagnosis('powerIssue')">Касса не включается</button>
+        <button onclick="startDiagnosis('networkError')">Горит красное сообщение с ошибкой подключения к сети</button>
+    </section>
 
-        <section id="diagnosisSection" style="display: none;">
-            <h2 id="diagnosisTitle"></h2>
-            <div id="diagnosisContent"></div>
-        </section>
-    </main>
+    <!-- Раздел "Регламентные работы" -->
+    <section id="maintenance" class="content-section" style="display: none;">
+        <h2>Регламентные работы</h2>
+        <p>Здесь будет информация о регламентных работах.</p>
+    </section>
 
-    <footer>
-        <p>2025 МАДИ. Работу выполнил студент группы 5ЗбАСУп Рейн Д.К.</p>
-    </footer>
+    <!-- Раздел "Справочная информация" -->
+    <section id="reference" class="content-section" style="display: none;">
+        <h2>Справочная информация</h2>
+        <p>Здесь будет справочная информация.</p>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- Раздел диагностики (остался без изменений) -->
+    <section id="diagnosisSection" style="display: none;">
+        <h2 id="diagnosisTitle"></h2>
+        <div id="diagnosisContent"></div>
+    </section>
+</main>
+
+<footer>
+    <p>2025 МАДИ. Работу выполнил студент группы 5ЗбАСУп Рейн Д.К.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

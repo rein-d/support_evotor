@@ -111,3 +111,18 @@ function resetToMainMenu() {
     mainMenu.style.display = 'block';
     diagnosisSection.style.display = 'none';
 }
+
+// Функция для показа выбранного раздела
+function showSection(sectionId) {
+    // Скрываем все разделы
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    // Показываем выбранный раздел
+    const selectedSection = document.getElementById(sectionId);
+    if (selectedSection) {
+        selectedSection.style.display = 'block';
+    }
+}
