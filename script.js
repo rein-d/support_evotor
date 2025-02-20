@@ -37,18 +37,15 @@ function handlePowerIssue(answer) {
     if (answer === 'noPower') {
         diagnosisContent.innerHTML = `
             <p>Подключите кассу к рабочей розетке и попробуйте снова включить.</p>
-            <button onclick="handlePowerIssue('didItHelp')">Помогло?</button>
+            <p>Касса включилась?</p>
+            <button onclick="resetToMainMenu()">Да</button>
+            <button onclick="handlePowerIssue('yesPower')">Нет</button>
         `;
     } else if (answer === 'yesPower') {
         diagnosisContent.innerHTML = `
             <p>Горит ли световой индикатор на устройстве?</p>
             <button onclick="handlePowerIssue('indicatorOn')">Да</button>
             <button onclick="handlePowerIssue('indicatorOff')">Нет</button>
-        `;
-    } else if (answer === 'didItHelp') {
-        diagnosisContent.innerHTML = `
-            <p>Проблема решена! Вернуться в главное меню?</p>
-            <button onclick="resetToMainMenu()">Вернуться</button>
         `;
     } else if (answer === 'indicatorOn') {
         diagnosisContent.innerHTML = `
@@ -71,8 +68,16 @@ function handleNetworkError(answer) {
 
     if (answer === 'noWifi') {
         diagnosisContent.innerHTML = `
-            <p>Подключите кассу к активному интернет-соединению по Wi-Fi.</p>
-            <button onclick="startDiagnosis('networkError')">Проверить снова</button>
+            <p>Касса подключена к активной wi-fi сети?</p>
+            <button onclick="handleNetworkError('yesWifi')">Да</button>
+            <button onclick="handleNetworkError('noWifi')">Нет</button>
+        `;
+    } else if (answer === 'noWifi') {
+        diagnosisContent.innerHTML = `
+            <p>Подключите смарт-терминал к активной wi-fi сети.</p>
+            <p>Красное сообщение об ошибке перестало отображаться?</p>
+            <button onclick="resetToMainMenu()">Да</button>
+            <button onclick="handleNetworkError('noInternet')">Нет</button>
         `;
     } else if (answer === 'yesWifi') {
         diagnosisContent.innerHTML = `
@@ -83,10 +88,19 @@ function handleNetworkError(answer) {
         `;
     } else if (answer === 'noInternet') {
         diagnosisContent.innerHTML = `
-            <p>Текущее Wi-Fi соединение не имеет доступа к интернету. Попробуйте подключиться к другой сети.</p>
-            <button onclick="startDiagnosis('networkError')">Проверить снова</button>
+            <p>Текущее Wi-Fi соединение не имеет доступа к интернету. Попробуйте подключиться к другой wi-fi сети.</p>
+            <p>Красное сообщение об ошибке перестало отображаться?</p>
+            <button onclick="resetToMainMenu()">Да</button>
+            <button onclick="handleNetworkError('wifiError')">Нет</button>
+        `;
+    } else if (answer === 'wifiError') {
+        diagnosisContent.innerHTML = `
+            <p>Проблема с wi-fi модулем. Необходимо обратиться в сервисный центр.</p>
+            <a href="https://evotor.ru/pokupka-servis/#service" target="_blank">Список сервисных центров</a>
+            <button onclick="resetToMainMenu()">Вернуться</button>
         `;
     }
+
 }
 
 // Возврат в главное меню
