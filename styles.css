@@ -1,5 +1,8 @@
 /* Общие стили */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота страницы */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -21,7 +24,9 @@ nav button {
 }
 
 main {
+    flex: 1;
     padding: 1rem;
+    min-height: calc(100vh - 150px);
 }
 
 button {
@@ -43,14 +48,13 @@ button:hover {
     margin-top: 2rem;
 }
 
+/* Стили для footer */
 footer {
     text-align: center;
     padding: 1rem;
     background-color: #007bff;
     color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 2rem; /* Добавляем отступ сверху, чтобы footer не прилипал к контенту */
 }
 
 /* Стили для навигационной панели */
