@@ -55,24 +55,63 @@ footer {
 
 /* Стили для навигационной панели */
 #navbar {
-    display: flex;
-    flex-direction: column; /* Вертикальное расположение кнопок */
-    align-items: center; /* Выравнивание по центру */
-    gap: 0.5rem; /* Расстояние между кнопками */
+    display: flex; /* Горизонтальное расположение кнопок */
+    justify-content: center; /* Выравнивание по центру */
+    gap: 1rem; /* Расстояние между кнопками */
     margin-top: 1rem;
 }
 
-#navbar button {
-    background-color: #5a5a5a;
+.nav-button {
+    background-color: #676767;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem; /* Увеличиваем отступы для кнопок */
     cursor: pointer;
     color: white;
     border-radius: 5px;
-    width: 80%; /* Ширина кнопок */
+    font-size: 1rem; /* Размер шрифта */
     text-align: center; /* Текст по центру */
+    transition: background-color 0.3s ease; /* Плавный переход при наведении */
 }
 
-#navbar button:hover {
-    background-color: #0056b3;
+.nav-button:hover {
+    background-color: #0056b3; /* Цвет при наведении */
+}
+
+/* Стили для справочной информации */
+.info-block {
+    margin-top: 1rem;
+}
+
+.info-block h3 {
+    font-size: 1.5rem; /* Размер шрифта для заголовка */
+    color: #007bff; /* Цвет заголовка */
+    margin-bottom: 0.5rem; /* Отступ под заголовком */
+}
+
+.info-block p {
+    font-size: 1rem; /* Размер шрифта для параграфов */
+    line-height: 1.6; /* Интервал между строками */
+    color: #333; /* Темно-серый цвет текста */
+}
+
+.info-block ul {
+    list-style-type: disc; /* Тип маркеров для списка */
+    margin-left: 1.5rem; /* Отступ слева для списка */
+    padding: 0; /* Убираем лишние отступы */
+}
+
+.info-block li {
+    font-size: 1rem; /* Размер шрифта для пунктов списка */
+    line-height: 1.6; /* Интервал между строками */
+    margin-bottom: 0.5rem; /* Отступ между пунктами списка */
+}
+
+.info-block a {
+    color: #007bff; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold; /* Жирный шрифт для ссылки */
+}
+
+.info-block a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
 }
