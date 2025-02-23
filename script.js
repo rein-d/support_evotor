@@ -102,7 +102,7 @@ function handlePrinterError(answer) {
         diagnosisContent.innerHTML = `
         <p>Изображение и текст имеют дефекты?</p>
             <button onclick="handlePrinterError('noImageIssues')">Нет</button>
-            <button onclick="handlePrinterError('yesImageIssues')">Да</button>
+            <button onclick="handlePrinterError('noProblemSolved')">Да</button>
         `;
     } else if (answer === 'noImageIssues') {
         diagnosisContent.innerHTML = `
