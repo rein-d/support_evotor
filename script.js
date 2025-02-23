@@ -215,3 +215,13 @@ function showSection(sectionId) {
         selectedSection.style.display = 'block';
     }
 }
+
+// Функция для показа/скрытия инструкции
+function showInstruction(instructionId) {
+    const instruction = document.getElementById(instructionId);
+    if (instruction.style.display === 'none' || instruction.style.display === '') {
+        instruction.style.display = 'block'; // Показываем инструкцию
+    } else {
+        instruction.style.display = 'none'; // Скрываем инструкцию
+    }
+}

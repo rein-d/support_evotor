@@ -132,3 +132,38 @@ footer {
     border-radius: 10px; /* Закругленные углы */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкая тень для эффекта объема */
 }
+
+/* Стили для пунктов регламентных работ */
+.maintenance-item {
+    margin-bottom: 1.5rem;
+}
+
+.maintenance-item h3 {
+    font-size: 1.25rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+.maintenance-item button {
+    background-color: darkslategray;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.maintenance-item button:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для инструкций */
+.instruction {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    line-height: 1.6;
+}

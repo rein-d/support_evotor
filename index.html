@@ -30,7 +30,42 @@
     <!-- Раздел "Регламентные работы" -->
     <section id="maintenance" class="content-section" style="display: none;">
         <h2>Регламентные работы</h2>
-        <p>Здесь будет информация о регламентных работах.</p>
+
+        <!-- Пункт 1 -->
+        <div class="maintenance-item">
+            <h3>Ежедневная проверка оборудования</h3>
+            <button onclick="showInstruction('dailyCheck')">Показать инструкцию</button>
+            <div id="dailyCheck" class="instruction" style="display: none;">
+                <p><strong>Инструкция:</strong> Проверьте, что все устройства подключены к питанию. Убедитесь, что смарт-терминал включен и работает корректно.</p>
+            </div>
+        </div>
+
+        <!-- Пункт 2 -->
+        <div class="maintenance-item">
+            <h3>Очистка терминала</h3>
+            <button onclick="showInstruction('cleaning')">Показать инструкцию</button>
+            <div id="cleaning" class="instruction" style="display: none;">
+                <p><strong>Инструкция:</strong> Используйте мягкую ткань, слегка смоченную водой или спиртом, чтобы очистить экран и корпус терминала. Не используйте агрессивные химические вещества.</p>
+            </div>
+        </div>
+
+        <!-- Пункт 3 -->
+        <div class="maintenance-item">
+            <h3>Проверка чековой ленты</h3>
+            <button onclick="showInstruction('paperCheck')">Показать инструкцию</button>
+            <div id="paperCheck" class="instruction" style="display: none;">
+                <p><strong>Инструкция:</strong> Убедитесь, что в терминале достаточно чековой ленты. Если лента заканчивается, замените её на новую.</p>
+            </div>
+        </div>
+
+        <!-- Пункт 4 -->
+        <div class="maintenance-item">
+            <h3>Обновление программного обеспечения</h3>
+            <button onclick="showInstruction('softwareUpdate')">Показать инструкцию</button>
+            <div id="softwareUpdate" class="instruction" style="display: none;">
+                <p><strong>Инструкция:</strong> Перейдите в меню "Настройки" → "Обновления". Проверьте наличие обновлений и установите их, если они доступны.</p>
+            </div>
+        </div>
     </section>
 
     <!-- Раздел "Справочная информация" -->
