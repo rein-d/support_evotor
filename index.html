@@ -33,7 +33,7 @@
 
         <!-- Пункт 1 -->
         <div class="maintenance-item">
-            <h3>Ежедневная проверка оборудования</h3>
+            <h3>Проверка оборудования <span class="frequency">(ежедневно)</span></h3>
             <button onclick="showInstruction('dailyCheck')">Показать инструкцию</button>
             <div id="dailyCheck" class="instruction" style="display: none;">
                 <p><strong>Инструкция:</strong></p>
@@ -50,7 +50,7 @@
 
         <!-- Пункт 2 -->
         <div class="maintenance-item">
-            <h3>Очистка терминала</h3>
+            <h3>Очистка терминала <span class="frequency">(еженедельно)</span></h3>
             <button onclick="showInstruction('cleaning')">Показать инструкцию</button>
             <div id="cleaning" class="instruction" style="display: none;">
                 <p><strong>Инструкция:</strong> Используйте мягкую ткань, слегка смоченную водой или спиртом, чтобы очистить экран и корпус терминала. Не используйте агрессивные химические вещества.</p>
@@ -59,19 +59,10 @@
 
         <!-- Пункт 3 -->
         <div class="maintenance-item">
-            <h3>Проверка чековой ленты</h3>
+            <h3>Проверка чековой ленты <span class="frequency">(по мере необходимости)</span></h3>
             <button onclick="showInstruction('paperCheck')">Показать инструкцию</button>
             <div id="paperCheck" class="instruction" style="display: none;">
                 <p><strong>Инструкция:</strong> Убедитесь, что в терминале достаточно чековой ленты. Если лента заканчивается, замените её на новую:</p>
-            </div>
-        </div>
-
-        <!-- Пункт 4 -->
-        <div class="maintenance-item">
-            <h3>Обновление программного обеспечения</h3>
-            <button onclick="showInstruction('softwareUpdate')">Показать инструкцию</button>
-            <div id="softwareUpdate" class="instruction" style="display: none;">
-                <p><strong>Инструкция:</strong> Перейдите в меню "Настройки" → "Обновления". Проверьте наличие обновлений и установите их, если они доступны.</p>
                 <ul>
                     <li>Выключите смарт-терминал</li>
                     <li>Откройте крышку отсека чековой ленты</li>
@@ -82,6 +73,15 @@
                 <div class="image-container">
                     <img src="images/evotor-receipt.png" alt="Смарт-терминал Эвотор" class="evotor-image">
                 </div>
+            </div>
+        </div>
+
+        <!-- Пункт 4 -->
+        <div class="maintenance-item">
+            <h3>Обновление программного обеспечения <span class="frequency">(ежемесячно)</span></h3>
+            <button onclick="showInstruction('softwareUpdate')">Показать инструкцию</button>
+            <div id="softwareUpdate" class="instruction" style="display: none;">
+                <p><strong>Инструкция:</strong> Перейдите в меню "Настройки" → "Обновления". Проверьте наличие обновлений и установите их, если они доступны.</p>
             </div>
         </div>
     </section>
