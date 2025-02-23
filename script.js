@@ -157,15 +157,8 @@ function handleNetworkError(answer) {
 
     if (answer === 'noWifi') {
         diagnosisContent.innerHTML = `
-            <p>Касса подключена к активной wi-fi сети?</p>
+            <p>Wi-fi имеет доступ к интернету?</p>
             <button onclick="handleNetworkError('yesWifi')">Да</button>
-            <button onclick="handleNetworkError('noWifi')">Нет</button>
-        `;
-    } else if (answer === 'noWifi') {
-        diagnosisContent.innerHTML = `
-            <p>Подключите смарт-терминал к активной wi-fi сети.</p>
-            <p>Красное сообщение об ошибке перестало отображаться?</p>
-            <button onclick="resetToMainMenu()">Да</button>
             <button onclick="handleNetworkError('noInternet')">Нет</button>
         `;
     } else if (answer === 'yesWifi') {
