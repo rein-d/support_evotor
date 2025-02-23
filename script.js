@@ -39,7 +39,7 @@ function startDiagnosis(issueType) {
         diagnosisContent.innerHTML = `
             <p>При нажатии кнопки сканера и наведении на штрих-код терминал издает звуковой сигнал?</p>
             <button onclick="handleScannerError('noScan')">Нет</button>
-            <button onclick="handleScannerError('yesScan')">Да</button>
+            <button onclick="handleScannerError('noDiagnos')">Да</button>
         `;
     }
 }
