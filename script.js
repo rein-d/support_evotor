@@ -88,8 +88,8 @@ function handlePrinterError(answer) {
         diagnosisContent.innerHTML = `
         <p>Попробуйте открыть отсек, положить бумагу для принтера в пазы отсека и аккуратно закрыть до щелчка.</p>
         <p>Повторите печать чека. Проблема устранена?</p>
-            <button onclick="handlePrinterError('noOpenBox')">Нет</button>
-            <button onclick="handlePrinterError('yesOpenBox')">Да</button>
+            <button onclick="handlePrinterError('yesOpenBox')">Нет</button>
+            <button onclick="resetToMainMenu()">Да</button>
         `;
     } else if (answer === 'yesOpenBox') {
         diagnosisContent.innerHTML = `
