@@ -31,7 +31,7 @@ function startDiagnosis(issueType) {
         diagnosisTitle.textContent = 'Проблема cо встроенным принтером чеков';
         diagnosisContent.innerHTML = `
             <p>Вставлена ли бумага для принтера чеков?</p>
-            <button onclick="handlePrinterError('noPaper')">Нет</button>
+            <button onclick="handlePrinterError('noOpenBox')">Нет</button>
             <button onclick="handlePrinterError('yesPaper')">Да</button>
         `;
     } else if (issueType === 'scannerError') {
@@ -86,7 +86,7 @@ function handlePrinterError(answer) {
         `;
     } else if (answer === 'noOpenBox') {
         diagnosisContent.innerHTML = `
-        <p>Попробуйте открыть отсек, заново положить бумагу для принтера в разы отсека и аккуратно закрыть до щелчка.</p>
+        <p>Попробуйте открыть отсек, положить бумагу для принтера в пазы отсека и аккуратно закрыть до щелчка.</p>
         <p>Повторите печать чека. Проблема устранена?</p>
             <button onclick="handlePrinterError('noOpenBox')">Нет</button>
             <button onclick="handlePrinterError('yesOpenBox')">Да</button>
