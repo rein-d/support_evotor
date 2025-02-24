@@ -64,8 +64,9 @@ function handleScannerError(answer) {
         diagnosisContent.innerHTML = `
         <p>Возможно сканируемый штрих-код имеет дефекты.</p>
         <p>Попробуйте отсканировать другой штрих-код.</p>
-            <button onclick="handleScannerError('noBadCode')">Все равно не считывается</button>
-            <button onclick="resetToMainMenu()">Вернуться</button>
+        <p>Проблема решена?</p>
+            <button onclick="handleScannerError('noBadCode')">Нет</button>
+            <button onclick="resetToMainMenu()">Да</button>
         `;
     } else if (answer === 'noBadCode') {
         diagnosisContent.innerHTML = `
